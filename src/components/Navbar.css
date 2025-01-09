@@ -1,0 +1,49 @@
+/* File: src/components/Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px; /* Increase padding to make the navbar thicker */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text for links and logo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo image and text */
+  }
+  
+  .navbar-logo img {
+    height: 80px; /* Adjust the logo size */
+    width: auto;
+  }
+  
+  .navbar-logo span {
+    font-size: 1.8rem; /* Slightly larger logo font */
+    font-weight: bold;
+    color: #000000; /* Ensure the logo text is black */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Increase gap between links */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li a {
+    color: #000000; /* Black text for links */
+    text-decoration: none;
+    font-size: 1.1rem; /* Slightly larger font size for links */
+    font-weight: 500; /* Add some weight to the links for better visibility */
+  }
+  
+  .navbar-links li a:hover {
+    text-decoration: underline;
+    color: #555555; /* Optional: Slightly lighter black on hover */
+  }
+  

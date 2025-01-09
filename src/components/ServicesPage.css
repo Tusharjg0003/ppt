@@ -1,0 +1,83 @@
+/* File: src/components/ServicesPage.css */
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('../images/products\ image.png') no-repeat center center/cover; 
+    /* Add background image with overlay for a professional feel */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+  }
+  
+  .services-header {
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out; /* Header animation */
+  }
+  
+  .services-header h1 {
+    font-size: 3rem; /* Larger font size for emphasis */
+    font-weight: bold;
+    color: #ffffff; /* Ensure header text stands out */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add subtle text shadow */
+  }
+  
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Restrict maximum width for better layout */
+    margin-top: 20px;
+  }
+  
+  .service-item {
+    background-color: #ffffff; /* White background for each service item */
+    border-radius: 15px; /* More rounded corners for modern design */
+    padding: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+    text-align: center;
+    animation: fadeInScale 2s ease-in-out; /* Add animation to each box */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+  }
+  
+  .service-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+  }
+  
+  .service-item h2 {
+    font-size: 1.8rem; /* Slightly larger font size */
+    color: #333333; /* Dark grey for headers inside the box */
+    margin-bottom: 15px;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+    color: #555555; /* Medium grey for descriptive text */
+    line-height: 1.6;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

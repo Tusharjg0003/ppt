@@ -1,0 +1,64 @@
+/* File: src/components/HomePage.css */
+
+.homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../images/construction-site-silhouettes.jpg') no-repeat center center/cover; 
+    /* Added a semi-transparent overlay to reduce background opacity */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+  }
+  
+  .homepage-header {
+    animation: fadeInScale 2s ease-in-out; /* Apply fade-in and scale animation */
+  }
+  
+  .homepage-header h1 {
+    font-size: 4rem; /* Larger font size for the heading */
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: slideInFromTop 1.5s ease-out; /* Animate heading text */
+  }
+  
+  .homepage-header p {
+    font-size: 1.8rem; /* Larger font size for subtitle */
+    animation: slideInFromBottom 2s ease-out; /* Animate subtitle text */
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
