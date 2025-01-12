@@ -14,7 +14,7 @@ const Chatbot = ({ onClose }) => {
       setLoading(true);
 
       try {
-        const response = await fetch("hhttps://ppt-chatbot.onrender.com/ask", {
+        const response = await fetch("https://ppt-chatbot.onrender.com/ask", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
