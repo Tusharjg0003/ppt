@@ -1,0 +1,111 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 1100;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .chatbot-header {
+    background-color: #4a90e2;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chatbot-close-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  
+  .chatbot-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Arrange messages vertically */
+    gap: 10px; /* Add spacing between messages */
+  }
+  
+  .chatbot-message {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chatbot-message-bot {
+    align-self: flex-start; /* Align to the left */
+    background-color: #4a90e2;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .chatbot-message-user {
+    align-self: flex-end; /* Align to the right */
+    background-color: #e6ebf0;
+    color: #333;
+    text-align: right;
+  }
+  
+  .chatbot-footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #ffffff;
+  }
+  
+  .chatbot-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    margin-right: 10px;
+  }
+  
+  .chatbot-send-button {
+    background-color: #296bb5;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .chatbot-send-button:hover {
+    background-color: #3a6fab;
+  }
+  
+  .chatbot-typing-indicator {
+    align-self: flex-start;
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+  }
+  

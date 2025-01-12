@@ -1,64 +1,91 @@
-/* File: src/components/HomePage.css */
-
 .homepage-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('../images/construction-site-silhouettes.jpg') no-repeat center center/cover; 
-    /* Added a semi-transparent overlay to reduce background opacity */
-    color: #ffffff; /* White text for contrast */
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url('../images/construction-site-silhouettes.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  text-align: center;
+}
+
+.homepage-header {
+  animation: fadeInScale 2s ease-in-out;
+}
+
+.homepage-header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: slideInFromTop 1.5s ease-out;
+}
+
+.homepage-header p {
+  font-size: 1.8rem;
+  animation: slideInFromBottom 2s ease-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
   }
-  
-  .homepage-header {
-    animation: fadeInScale 2s ease-in-out; /* Apply fade-in and scale animation */
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .homepage-header h1 {
-    font-size: 4rem; /* Larger font size for the heading */
-    font-weight: bold;
-    margin-bottom: 20px;
-    animation: slideInFromTop 1.5s ease-out; /* Animate heading text */
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
   }
-  
-  .homepage-header p {
-    font-size: 1.8rem; /* Larger font size for subtitle */
-    animation: slideInFromBottom 2s ease-out; /* Animate subtitle text */
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Keyframes for animations */
-  @keyframes fadeInScale {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
   }
-  
-  @keyframes slideInFromTop {
-    from {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  @keyframes slideInFromBottom {
-    from {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
+}
+
+/* Chat with Us Button */
+.chat-with-us-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4a90e2; /* Bright orange color */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Button hover effect */
+.chat-with-us-button:hover {
+  background-color: #e65c00; /* Darker orange */
+  transform: scale(1.1); /* Slightly enlarge the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+}
+
+/* Button active state */
+.chat-with-us-button:active {
+  transform: scale(0.95); /* Slightly shrink the button when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow for pressed effect */
+}
